@@ -1,0 +1,188 @@
+<svg viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <!-- Deep gradient background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#0d1b3e"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+    <!-- Okta blue accent -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#007DC1"/>
+      <stop offset="100%" style="stop-color:#00AEEF"/>
+    </linearGradient>
+    <!-- Shield gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007DC1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#005a9e;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Green glow -->
+    <linearGradient id="greenGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C853"/>
+      <stop offset="100%" style="stop-color:#00E676"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#bg)" rx="12"/>
+
+  <!-- Grid lines - subtle -->
+  <g opacity="0.04" stroke="#4a9eff" stroke-width="0.5">
+    <line x1="0" y1="50" x2="1200" y2="50"/>
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="250" x2="1200" y2="250"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="340"/>
+    <line x1="200" y1="0" x2="200" y2="340"/>
+    <line x1="300" y1="0" x2="300" y2="340"/>
+    <line x1="400" y1="0" x2="400" y2="340"/>
+    <line x1="500" y1="0" x2="500" y2="340"/>
+    <line x1="600" y1="0" x2="600" y2="340"/>
+    <line x1="700" y1="0" x2="700" y2="340"/>
+    <line x1="800" y1="0" x2="800" y2="340"/>
+    <line x1="900" y1="0" x2="900" y2="340"/>
+    <line x1="1000" y1="0" x2="1000" y2="340"/>
+    <line x1="1100" y1="0" x2="1100" y2="340"/>
+  </g>
+
+  <!-- Decorative circles - background orbs -->
+  <circle cx="950" cy="170" r="180" fill="none" stroke="#007DC1" stroke-width="0.5" opacity="0.12"/>
+  <circle cx="950" cy="170" r="140" fill="none" stroke="#007DC1" stroke-width="0.5" opacity="0.1"/>
+  <circle cx="950" cy="170" r="100" fill="none" stroke="#007DC1" stroke-width="0.8" opacity="0.08"/>
+  <circle cx="180" cy="280" r="120" fill="#007DC1" opacity="0.04"/>
+  <circle cx="60" cy="60" r="80" fill="#00AEEF" opacity="0.05"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="4" rx="0" fill="url(#accent)"/>
+
+  <!-- Left decorative shield icon -->
+  <g transform="translate(80, 90)" filter="url(#strongGlow)">
+    <!-- Shield shape -->
+    <path d="M60 8 L8 30 L8 80 Q8 130 60 155 Q112 130 112 80 L112 30 Z" 
+          fill="url(#shieldGrad)" opacity="0.9"/>
+    <!-- Shield highlight -->
+    <path d="M60 8 L8 30 L8 80 Q8 130 60 155 Q112 130 112 80 L112 30 Z" 
+          fill="none" stroke="#00AEEF" stroke-width="1.5" opacity="0.6"/>
+    <!-- Lock icon inside shield -->
+    <rect x="42" y="75" width="36" height="28" rx="4" fill="white" opacity="0.95"/>
+    <path d="M50 75 L50 65 Q50 50 60 50 Q70 50 70 65 L70 75" 
+          fill="none" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.95"/>
+    <circle cx="60" cy="88" r="5" fill="#007DC1"/>
+    <rect x="58" y="90" width="4" height="8" rx="2" fill="#007DC1"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="240" y="128" font-size="52" font-weight="800" fill="white" letter-spacing="-1">
+    Okta MFA Policy
+  </text>
+  <text x="240" y="128" font-size="52" font-weight="800" fill="url(#accent)" letter-spacing="-1" opacity="0.3">
+    Okta MFA Policy
+  </text>
+  <text x="240" y="128" font-size="52" font-weight="800" fill="white" letter-spacing="-1">
+    Okta MFA Policy
+  </text>
+
+  <!-- Subtitle -->
+  <text x="242" y="168" font-size="22" fill="#a0c4e8" font-weight="400" letter-spacing="0.5">
+    Configuration &amp; Enforcement
+  </text>
+
+  <!-- Horizontal rule line -->
+  <rect x="240" y="185" width="560" height="2" fill="url(#accent)" rx="1" opacity="0.6"/>
+
+  <!-- Description text -->
+  <text x="242" y="218" font-size="15" fill="#7a9cbf" font-weight="400">
+    Enforcing Multi-Factor Authentication via Okta Authentication Policies
+  </text>
+  <text x="242" y="240" font-size="15" fill="#7a9cbf" font-weight="400">
+    using TOTP · FastPass · Password + Possession Factor
+  </text>
+
+  <!-- Tag pills -->
+  <!-- IAM -->
+  <rect x="242" y="265" width="88" height="28" rx="14" fill="#007DC1" opacity="0.2"/>
+  <rect x="242" y="265" width="88" height="28" rx="14" fill="none" stroke="#007DC1" stroke-width="1" opacity="0.6"/>
+  <text x="286" y="283" font-size="12" fill="#00AEEF" text-anchor="middle" font-weight="600">IAM</text>
+
+  <!-- Zero Trust -->
+  <rect x="342" y="265" width="108" height="28" rx="14" fill="#007DC1" opacity="0.2"/>
+  <rect x="342" y="265" width="108" height="28" rx="14" fill="none" stroke="#007DC1" stroke-width="1" opacity="0.6"/>
+  <text x="396" y="283" font-size="12" fill="#00AEEF" text-anchor="middle" font-weight="600">Zero Trust</text>
+
+  <!-- MFA -->
+  <rect x="462" y="265" width="68" height="28" rx="14" fill="#00C853" opacity="0.15"/>
+  <rect x="462" y="265" width="68" height="28" rx="14" fill="none" stroke="#00C853" stroke-width="1" opacity="0.5"/>
+  <text x="496" y="283" font-size="12" fill="#00E676" text-anchor="middle" font-weight="600">MFA</text>
+
+  <!-- SAML -->
+  <rect x="542" y="265" width="76" height="28" rx="14" fill="#FF6D00" opacity="0.15"/>
+  <rect x="542" y="265" width="76" height="28" rx="14" fill="none" stroke="#FF6D00" stroke-width="1" opacity="0.5"/>
+  <text x="580" y="283" font-size="12" fill="#FF9E40" text-anchor="middle" font-weight="600">SAML 2.0</text>
+
+  <!-- Right side - Stats/info cards -->
+  <!-- Card 1 -->
+  <rect x="780" y="80" width="160" height="75" rx="10" fill="#0d1f3e" stroke="#007DC1" stroke-width="1" opacity="0.9"/>
+  <text x="860" y="114" font-size="32" font-weight="800" fill="url(#accent)" text-anchor="middle" filter="url(#glow)">8</text>
+  <text x="860" y="140" font-size="12" fill="#7a9cbf" text-anchor="middle">Config Steps</text>
+
+  <!-- Card 2 -->
+  <rect x="960" y="80" width="160" height="75" rx="10" fill="#0d1f3e" stroke="#00C853" stroke-width="1" opacity="0.9"/>
+  <text x="1040" y="112" font-size="26" font-weight="800" fill="url(#greenGlow)" text-anchor="middle" filter="url(#glow)">100%</text>
+  <text x="1040" y="140" font-size="12" fill="#7a9cbf" text-anchor="middle">MFA Coverage</text>
+
+  <!-- Card 3 -->
+  <rect x="780" y="175" width="160" height="75" rx="10" fill="#0d1f3e" stroke="#FF6D00" stroke-width="1" opacity="0.9"/>
+  <text x="860" y="210" font-size="22" font-weight="800" fill="#FF9E40" text-anchor="middle" filter="url(#glow)">TOTP</text>
+  <text x="860" y="237" font-size="12" fill="#7a9cbf" text-anchor="middle">+ FastPass</text>
+
+  <!-- Card 4 -->
+  <rect x="960" y="175" width="160" height="75" rx="10" fill="#0d1f3e" stroke="#a855f7" stroke-width="1" opacity="0.9"/>
+  <text x="1040" y="208" font-size="18" font-weight="800" fill="#c084fc" text-anchor="middle" filter="url(#glow)">Okta IdP</text>
+  <text x="1040" y="237" font-size="12" fill="#7a9cbf" text-anchor="middle">Identity Provider</text>
+
+  <!-- Flow diagram bottom right -->
+  <g transform="translate(795, 270)" opacity="0.85">
+    <rect x="0" y="0" width="76" height="24" rx="12" fill="#007DC1" opacity="0.3"/>
+    <text x="38" y="16" font-size="10" fill="#00AEEF" text-anchor="middle" font-weight="600">PASSWORD</text>
+    <text x="90" y="16" font-size="16" fill="#007DC1" text-anchor="middle">→</text>
+    <rect x="108" y="0" width="76" height="24" rx="12" fill="#00C853" opacity="0.25"/>
+    <text x="146" y="16" font-size="10" fill="#00E676" text-anchor="middle" font-weight="600">VERIFY</text>
+    <text x="198" y="16" font-size="16" fill="#00C853" text-anchor="middle">→</text>
+    <rect x="216" y="0" width="76" height="24" rx="12" fill="#a855f7" opacity="0.25"/>
+    <text x="254" y="16" font-size="10" fill="#c084fc" text-anchor="middle" font-weight="600">ACCESS ✓</text>
+  </g>
+
+  <!-- Bottom border -->
+  <rect x="0" y="336" width="1200" height="4" rx="0" fill="url(#accent)" opacity="0.5"/>
+
+  <!-- Corner decoration top right -->
+  <circle cx="1170" cy="30" r="20" fill="none" stroke="#007DC1" stroke-width="1" opacity="0.3"/>
+  <circle cx="1170" cy="30" r="12" fill="#007DC1" opacity="0.15"/>
+
+  <!-- Corner decoration bottom left -->
+  <circle cx="30" cy="310" r="15" fill="none" stroke="#00C853" stroke-width="1" opacity="0.3"/>
+</svg>

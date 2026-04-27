@@ -1,0 +1,127 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="100%" style="stop-color:#0d1b3e"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007DC1"/>
+      <stop offset="100%" style="stop-color:#005a9e"/>
+    </linearGradient>
+    <linearGradient id="green2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C853"/>
+      <stop offset="100%" style="stop-color:#009624"/>
+    </linearGradient>
+    <linearGradient id="orange2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6D00"/>
+      <stop offset="100%" style="stop-color:#E65100"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#007DC1"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00C853"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#bg2)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="45" font-size="20" font-weight="700" fill="white" text-anchor="middle">MFA Authentication Flow</text>
+  <rect x="200" y="52" width="500" height="2" fill="#007DC1" rx="1" opacity="0.5"/>
+
+  <!-- USER BOX -->
+  <rect x="30" y="200" width="120" height="60" rx="10" fill="#0d1f3e" stroke="#007DC1" stroke-width="1.5"/>
+  <text x="90" y="226" font-size="24" text-anchor="middle">👤</text>
+  <text x="90" y="248" font-size="12" fill="#a0c4e8" text-anchor="middle" font-weight="600">User</text>
+
+  <!-- Arrow 1 -->
+  <line x1="152" y1="230" x2="195" y2="230" stroke="#007DC1" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="173" y="222" font-size="10" fill="#7a9cbf" text-anchor="middle">Login</text>
+
+  <!-- OKTA POLICY ENGINE BOX -->
+  <rect x="198" y="155" width="180" height="150" rx="10" fill="#0d1f3e" stroke="#007DC1" stroke-width="1.5"/>
+  <text x="288" y="185" font-size="13" font-weight="700" fill="white" text-anchor="middle">Okta Policy</text>
+  <text x="288" y="202" font-size="13" font-weight="700" fill="white" text-anchor="middle">Engine</text>
+  <rect x="218" y="212" width="140" height="28" rx="6" fill="#007DC1" opacity="0.2"/>
+  <text x="288" y="230" font-size="11" fill="#00AEEF" text-anchor="middle">Require MFA Rule</text>
+  <rect x="218" y="248" width="140" height="28" rx="6" fill="#007DC1" opacity="0.1"/>
+  <text x="288" y="260" font-size="10" fill="#7a9cbf" text-anchor="middle">ANY user → Password</text>
+  <text x="288" y="274" font-size="10" fill="#7a9cbf" text-anchor="middle">+ Another Factor</text>
+  <text x="288" y="295" font-size="10" fill="#7a9cbf" text-anchor="middle">Priority 1 · ENABLED</text>
+
+  <!-- Arrow 2 - down to factor 1 -->
+  <line x1="288" y1="307" x2="288" y2="345" stroke="#007DC1" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- FACTOR 1 BOX -->
+  <rect x="198" y="348" width="180" height="55" rx="10" fill="#0d1f3e" stroke="#FF6D00" stroke-width="1.5"/>
+  <text x="288" y="372" font-size="12" font-weight="700" fill="#FF9E40" text-anchor="middle">🔑 Factor 1</text>
+  <text x="288" y="390" font-size="11" fill="#a0c4e8" text-anchor="middle">Password (Knowledge)</text>
+
+  <!-- Arrow from factor 1 to factor 2 -->
+  <line x1="380" y1="375" x2="430" y2="375" stroke="#00C853" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="405" y="368" font-size="10" fill="#7a9cbf" text-anchor="middle">✓ Pass</text>
+
+  <!-- FACTOR 2 BOX -->
+  <rect x="432" y="348" width="180" height="55" rx="10" fill="#0d1f3e" stroke="#00C853" stroke-width="1.5"/>
+  <text x="522" y="372" font-size="12" font-weight="700" fill="#00E676" text-anchor="middle">📱 Factor 2</text>
+  <text x="522" y="390" font-size="11" fill="#a0c4e8" text-anchor="middle">Okta Verify TOTP</text>
+
+  <!-- Okta Verify options -->
+  <line x1="522" y1="307" x2="522" y2="348" stroke="#007DC1" stroke-width="1" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <!-- OKTA VERIFY AUTHENTICATOR -->
+  <rect x="432" y="155" width="180" height="145" rx="10" fill="#0d1f3e" stroke="#00C853" stroke-width="1.5"/>
+  <text x="522" y="182" font-size="13" font-weight="700" fill="white" text-anchor="middle">Okta Verify</text>
+  <rect x="450" y="192" width="144" height="22" rx="5" fill="#00C853" opacity="0.15"/>
+  <text x="522" y="207" font-size="10" fill="#00E676" text-anchor="middle">TOTP (6-digit code)</text>
+  <rect x="450" y="220" width="144" height="22" rx="5" fill="#00C853" opacity="0.1"/>
+  <text x="522" y="235" font-size="10" fill="#7abf7a" text-anchor="middle">FastPass (Biometric)</text>
+  <rect x="450" y="248" width="144" height="22" rx="5" fill="#007DC1" opacity="0.1"/>
+  <text x="522" y="263" font-size="10" fill="#7ab4d4" text-anchor="middle">Device Bound</text>
+  <text x="522" y="287" font-size="10" fill="#5a8a9a" text-anchor="middle">Hardware Protected</text>
+  <text x="522" y="302" font-size="10" fill="#5a8a9a" text-anchor="middle">Phishing Resistant ✓</text>
+
+  <!-- Arrow from policy to Okta Verify -->
+  <line x1="380" y1="230" x2="430" y2="230" stroke="#007DC1" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="405" y="222" font-size="10" fill="#7a9cbf" text-anchor="middle">Eval</text>
+
+  <!-- Arrow 3 - to access granted -->
+  <line x1="614" y1="375" x2="660" y2="375" stroke="#00C853" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="637" y="368" font-size="10" fill="#7a9cbf" text-anchor="middle">✓ Pass</text>
+
+  <!-- ACCESS GRANTED BOX -->
+  <rect x="662" y="348" width="180" height="55" rx="10" fill="#0d1f3e" stroke="#00C853" stroke-width="2"/>
+  <text x="752" y="372" font-size="14" font-weight="700" fill="#00E676" text-anchor="middle">✅ ACCESS</text>
+  <text x="752" y="390" font-size="11" fill="#a0c4e8" text-anchor="middle">GRANTED</text>
+
+  <!-- SAML APP -->
+  <rect x="662" y="155" width="180" height="80" rx="10" fill="#0d1f3e" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="752" y="185" font-size="13" font-weight="700" fill="white" text-anchor="middle">SAML App</text>
+  <text x="752" y="205" font-size="11" fill="#c084fc" text-anchor="middle">Require MFA Policy</text>
+  <text x="752" y="222" font-size="10" fill="#7a9cbf" text-anchor="middle">Assigned ✓</text>
+
+  <!-- Line from Access Granted up to SAML App -->
+  <line x1="752" y1="346" x2="752" y2="237" stroke="#00C853" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowGreen)"/>
+
+  <!-- AUTHENTICATORS PANEL -->
+  <rect x="30" y="80" width="120" height="100" rx="10" fill="#0d1f3e" stroke="#FF6D00" stroke-width="1"/>
+  <text x="90" y="102" font-size="11" font-weight="700" fill="white" text-anchor="middle">Authenticators</text>
+  <text x="90" y="122" font-size="10" fill="#FF9E40" text-anchor="middle">📧 Email</text>
+  <text x="90" y="140" font-size="10" fill="#00E676" text-anchor="middle">📱 Okta Verify</text>
+  <text x="90" y="158" font-size="10" fill="#a0c4e8" text-anchor="middle">🔑 Password</text>
+  <text x="90" y="172" font-size="9" fill="#5a8a9a" text-anchor="middle">All Active ✓</text>
+
+  <!-- Legend -->
+  <rect x="30" y="440" width="840" height="45" rx="8" fill="#0d1f3e" opacity="0.8"/>
+  <circle cx="70" cy="463" r="6" fill="#007DC1"/>
+  <text x="84" y="467" font-size="11" fill="#a0c4e8">Okta Policy Engine</text>
+  <circle cx="210" cy="463" r="6" fill="#00C853"/>
+  <text x="224" y="467" font-size="11" fill="#a0c4e8">Authentication Success</text>
+  <circle cx="390" cy="463" r="6" fill="#FF6D00"/>
+  <text x="404" y="467" font-size="11" fill="#a0c4e8">Knowledge Factor</text>
+  <circle cx="540" cy="463" r="6" fill="#a855f7"/>
+  <text x="554" y="467" font-size="11" fill="#a0c4e8">Application (SAML)</text>
+  <rect x="680" y="457" width="30" height="2" stroke="#007DC1" stroke-width="1" stroke-dasharray="5,3" fill="none"/>
+  <text x="718" y="467" font-size="11" fill="#a0c4e8">Data Flow</text>
+</svg>
